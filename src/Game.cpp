@@ -2,8 +2,11 @@
 
 namespace Beam {
 
-	Game::Game(const std::string& title) : _window(title) {
+	Game::Game(const std::string& title) : _window(Window(title)) {
 		
 	}
 
+	void Game::Run() const {
+		
+	}
 }
