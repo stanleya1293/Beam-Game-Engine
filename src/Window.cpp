@@ -7,7 +7,12 @@ namespace Beam {
 		glfwInit();
 		_baseWindow = glfwCreateWindow(_width, _height, title.c_str(), NULL, NULL);
 		glfwMakeContextCurrent(_baseWindow);
+	}
 
+	void Window::Update() const {
+		glClear(GL_COLOR_BUFFER_BIT);
+		glfwSwapBuffers(_baseWindow);
+		glfwPollEvents();
 	}
 
 }

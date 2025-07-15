@@ -7,6 +7,8 @@ namespace Beam {
 	}
 
 	void Game::Run() const {
-		
+		while (_window.IsOpen()) {
+			_window.Update();
+		}
 	}
 }

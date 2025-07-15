@@ -11,6 +11,8 @@ namespace Beam {
 	public:
 		Window(const std::string& title);
 
+		void Update() const;
+
 		inline void SetWidth(int width) { _width = width; }
 		inline void SetHeight(int height) { _height = height; }
 
@@ -18,8 +20,6 @@ namespace Beam {
 		inline int GetHeight() const { return _height; }
 		
 		inline bool IsOpen() const { return !glfwWindowShouldClose(_baseWindow); }
-
-
 	private:
 		int _width;
 		int _height;
