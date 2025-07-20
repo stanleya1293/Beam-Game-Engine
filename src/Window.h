@@ -11,20 +11,20 @@ namespace Beam {
 	public:
 		Window(const std::string& title);
 
-		void Update() const;
+		void update() const;
 
-		inline void SetWidth(int width) { _width = width; }
-		inline void SetHeight(int height) { _height = height; }
+		inline void set_width(int width) { _width = width; }
+		inline void set_height(int height) { _height = height; }
 
-		inline int GetWidth() const { return _width; }
-		inline int GetHeight() const { return _height; }
+		inline int get_width() const { return _width; }
+		inline int get_height() const { return _height; }
 		
-		inline bool IsOpen() const { return !glfwWindowShouldClose(_baseWindow); }
+		inline bool is_open() const { return !glfwWindowShouldClose(_base_window); }
 	private:
 		int _width;
 		int _height;
 		std::string _title;
-		GLFWwindow* _baseWindow;
+		GLFWwindow* _base_window;
 	};
 }
 

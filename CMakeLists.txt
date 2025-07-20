@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 4.0)
+
 project(Beam)
 
 add_subdirectory(libs/glfw-3.4)

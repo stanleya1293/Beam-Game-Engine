@@ -8,7 +8,7 @@ namespace Beam {
 	class Game {
 	public:
 		Game(const std::string &title);
-		void Run() const;
+		void run() const;
 	private:
 		Window _window;
 	};
