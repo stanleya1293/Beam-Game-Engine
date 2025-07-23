@@ -2,16 +2,16 @@
 
 namespace Beam {
 	Window::Window(const std::string &title) : 
-		_title(title), _width(DEFAULT_WIDTH), _height(DEFAULT_HEIGHT), _base_window(nullptr) {
+		_title(title), _width(DEFAULT_WIDTH), _height(DEFAULT_HEIGHT), _baseWindow(nullptr) {
 		glfwInit();
-		_base_window = glfwCreateWindow(_width, _height, title.c_str(), NULL, NULL);
-		glfwMakeContextCurrent(_base_window);
+		_baseWindow = glfwCreateWindow(_width, _height, title.c_str(), NULL, NULL);
+		glfwMakeContextCurrent(_baseWindow);
 		gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
 	}
 
-	void Window::update() const {
+	void Window::Update() const {
 		glClear(GL_COLOR_BUFFER_BIT);
-		glfwSwapBuffers(_base_window);
+		glfwSwapBuffers(_baseWindow);
 		glfwPollEvents();
 	}
 

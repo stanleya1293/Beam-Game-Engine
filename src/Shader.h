@@ -3,13 +3,20 @@
 
 #include "Libraries.h"
 
+enum class ShaderType {
+	Vertex,
+	Fragment
+};
+
 class Shader {
 public:
-	Shader();
+	Shader(const std::string &vertexFilePath, const std::string &fragmentFilePath);
 	~Shader();
-	void use() const;
+	void Use() const;
 private:
-	unsigned int _shader_program;
+	unsigned int LoadFile(ShaderType type, const std::string &fileName) const;
+private:
+	unsigned int _shaderProgram;
 };
 
 #endif

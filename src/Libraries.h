@@ -2,6 +2,7 @@
 #define LIBRARIES_H
 
 #include <string>
+#include <fstream>
 #include <iostream>
 #include <memory>
 #include <glad/glad.h>
